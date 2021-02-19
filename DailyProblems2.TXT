@@ -1,0 +1,9 @@
+// Write a MongoDB query to display all the restaurant which is in the borough Bronx
+
+db.restaurantsCollection.find({"borough":{$eq: "Bronx"}})
+
+//Write a MongoDB query to display the first 5 restaurant which is in the borough Bronx.
+db.restaurantsCollection.find({"borough":{$eq: "Bronx"}}).limit(5)
+
+//Write a MongoDB query to display the next 5 restaurants after skipping first 5 which are in the borough Bronx.
+db.restaurantsCollection.find({"borough":{$eq: "Bronx"}}).skip(5).limit(5)
